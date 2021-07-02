@@ -1,10 +1,11 @@
 import paho.mqtt.client as mqtt
 import json
 
-pay_load = {
-    "Track": 'A'
-    "Position": '5'
+train_cmd = {
+    "Track": 'A',
+    "Position":'5'
 }
+payload = json.dumps(train_cmd) # encode dict oject to JSON
 
 def connect_msg():
     print('Connect to Broker')
@@ -25,7 +26,7 @@ client.username_pw_set(username='pub_client', password='password')
 client.connect('127.0.0.1', 1883, 60)
 # client.connect('192.168.50.172', 1883)
 
-ret = client.publish('house/light', 'on')
+ret = client.publish('train/v1/go', payload)
 
 
 client.loop()
