@@ -1,12 +1,3 @@
-#! c:\python34\python.exe
-#!/usr/bin/env python
-###demo code provided by Steve Cope at www.steves-internet-guide.com
-##email steve@steves-internet-guide.com
-###Free to use for any purpose
-##If you like and use this code you can
-##buy me a drink here https://www.paypal.me/StepenCope
-##Grateful for any feedback
-
 import paho.mqtt.client as mqtt
 import time
 import json
